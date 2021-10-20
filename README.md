@@ -1,5 +1,5 @@
-# Design of 1024x32 SRAM (32Kbits) using OpenRAM and SKY130 PDKs 
-  This repository aims at design of 1024x32 SRAM cell array (32Kbits or 4KB) with a configuration of 1.8 V operating voltage and access time less than 2.5ns using Google SkyWater SKY130 PDKs and OpenRAM memory complier.
+# Design of SRAM using OpenRAM and SKY130 PDKs 
+  This repository aims at design of SRAM cell array with a configuration of 1.8 V operating voltage and access time less than 2.5ns using Google SkyWater SKY130 PDKs and OpenRAM memory complier.
   
   Static Random-Access Memory (SRAM) has become a standard element of any Application Specific Integrated Circuit (ASIC), System-On-Chip (SoC), or other micro-architectures. For this wide variety of applications, SRAMs are configured using parameters like the word-length, bit lines, operating voltage, access time, and most importantly the technology node. The access time of an SRAM cell is the time require for a read or write operation of SRAM. 
   
@@ -30,50 +30,54 @@
   
 ### Ports and Configuration 
 <table id= "data">
-<thead>
-	<tr><th>Type</th><th>Value</th></tr>
-</thead>
-<tbody>
-	<tr><tr><td>WORD_SIZE</td><td>32</td></tr>
-	<tr><td>NUM_WORDS</td><td>1024</td></tr>
-	<tr><td>NUM_BANKS</td><td>1</td></tr>
-	<tr><td>NUM_RW_PORTS</td><td>1</td></tr>
-	<tr><td>NUM_R_PORTS</td><td>0</td></tr>
-	<tr><td>NUM_W_PORTS</td><td>0</td></tr>
-	<tr><td>Area (&microm<sup>2</sup>)</td><td>534277</td></tr></tr>
-</tbody>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <tr>
+            <td>WORD_SIZE</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>NUM_WORDS</td>
+            <td>256</td>
+        </tr>
+        <tr>
+            <td>NUM_BANKS</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>NUM_RW_PORTS</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>NUM_R_PORTS</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>NUM_W_PORTS</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Area (&microm<sup>2</sup>)</td>
+            <td>205522</td>
+        </tr>
+        </tr>
+    </tbody>
 </table>
 
 ### Operating Conditions
-
-<table id= "data">
-<thead>
-	<tr><th>Parameter</th><th>Min</th><th>Typ</th><th>Max</th><th>Units</th></tr>
-</thead>
-<tbody>
-	<tr><tr><td>Power supply (VDD) range</td><td>1.8</td><td>1.8</td><td>1.8</td><td>Volts</td></tr>
-	<tr><td>Operating Temperature</td><td>0</td><td>25</td><td>100</td><td>Celsius</td></tr>
-	<tr><td>Operating Frequency (F)</td><td></td><td></td><td>86</td><td>MHz</td></tr></tr>
-</tbody>
-</table>
+<table id= "data"><thead><tr><th>Parameter</th><th>Min</th><th>Typ</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><tr><td>Power supply (VDD) range</td><td>1.8</td><td>1.8</td><td>1.8</td><td>Volts</td></tr><tr><td>Operating Temperature</td><td>25</td><td>25</td><td>25</td><td>Celsius</td></tr><tr><td>Operating Frequency (F)</td><td></td><td></td><td>541</td><td>MHz</td></tr></tr></tbody></table>
 
 ### Timing Data (Using analytical model: results may not be precise)
-<table id= "data">
-<thead>
-	<tr><th>Parameter</th><th>Min</th><th>Max</th><th>Units</th></tr>
-</thead>
-<tbody><tr><tr><td>din0[31:0] setup rising</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>din0[31:0] setup falling</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>din0[31:0] hold rising</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>din0[31:0] hold falling</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>dout0[31:0] cell rise</td><td>-1.968</td><td>3.437</td><td>ns</td></tr><tr><td>dout0[31:0] cell fall</td><td>2.922</td><td>3.125</td><td>ns</td></tr><tr><td>dout0[31:0] rise transition</td><td>0.007</td><td>0.027</td><td>ns</td></tr><tr><td>dout0[31:0] fall transition</td><td>0.007</td><td>0.027</td><td>ns</td></tr><tr><td>csb0 setup rising</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>csb0 setup falling</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>csb0 hold rising</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>csb0 hold falling</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>addr0[9:0] setup rising</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>addr0[9:0] setup falling</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>addr0[9:0] hold rising</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>addr0[9:0] hold falling</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>web0 setup rising</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>web0 setup falling</td><td>0.009</td><td>0.009</td><td>ns</td></tr><tr><td>web0 hold rising</td><td>0.001</td><td>0.001</td><td>ns</td></tr><tr><td>web0 hold falling</td><td>0.001</td><td>0.001</td><td>ns</td></tr></tr></tbody>
-</table>
+<table id= "data"><thead><tr><th>Parameter</th><th>Min</th><th>Max</th><th>Units</th></tr></thead><tbody><tr><tr><td>din0[31:0] setup rising</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>din0[31:0] setup falling</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>din0[31:0] hold rising</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>din0[31:0] hold falling</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>dout0[31:0] cell rise</td><td>0.318</td><td>0.549</td><td>ns</td></tr><tr><td>dout0[31:0] cell fall</td><td>0.354</td><td>0.499</td><td>ns</td></tr><tr><td>dout0[31:0] rise transition</td><td>0.002</td><td>0.016</td><td>ns</td></tr><tr><td>dout0[31:0] fall transition</td><td>0.002</td><td>0.016</td><td>ns</td></tr><tr><td>csb0 setup rising</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>csb0 setup falling</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>csb0 hold rising</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>csb0 hold falling</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>addr0[7:0] setup rising</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>addr0[7:0] setup falling</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>addr0[7:0] hold rising</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>addr0[7:0] hold falling</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>web0 setup rising</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>web0 setup falling</td><td>0.103</td><td>0.103</td><td>ns</td></tr><tr><td>web0 hold rising</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr><tr><td>web0 hold falling</td><td>-0.056</td><td>-0.056</td><td>ns</td></tr></tr></tbody></table>
 
 ### Power Data
-<table id= "data">
-<thead>
-	<tr><th>Pins</th><th>Mode</th><th>Power</th><th>Units</th></tr>
-</thead>
-<tbody>
-<tr><tr><td>!csb0 & clk0 & !web0</td><td>Read Rising</td><td>5.8939</td><td>mW</td></tr><tr><td>!csb0 & clk0 & !web0</td><td>Read Falling</td><td>5.8939</td><td>mW</td></tr><tr><td>!csb0 & !clk0 & web0</td><td>Write Rising</td><td>5.8939</td><td>mW</td></tr><tr><td>!csb0 & !clk0 & web0</td><td>Write Falling</td><td>5.8939</td><td>mW</td></tr><tr><td>csb0</td><td>leakage</td><td>0.033462</td><td>mW</td></tr></tr>
-</tbody>
-</table>
+<table id= "data"><thead><tr><th>Pins</th><th>Mode</th><th>Power</th><th>Units</th></tr></thead><tbody><tr><tr><td>!csb0 & clk0 & !web0</td><td>Read Rising</td><td>2.2331</td><td>mW</td></tr><tr><td>!csb0 & clk0 & !web0</td><td>Read Falling</td><td>2.2331</td><td>mW</td></tr><tr><td>!csb0 & !clk0 & web0</td><td>Write Rising</td><td>2.2331</td><td>mW</td></tr><tr><td>!csb0 & !clk0 & web0</td><td>Write Falling</td><td>2.2331</td><td>mW</td></tr><tr><td>csb0</td><td>leakage</td><td>0.008608</td><td>mW</td></tr></tr></tbody></table>
 
 # Setting Up Environment
   This repository mentioned multiple open-source circuit schematic design, layout design, SPICE simulations tools and memory compiler. The tools used and their installation is explained in details below. All the SkyWater SKY130 PDKs related files are added to the repository, which can be used without installing the complete PDKs. In order to install or get other details of SkyWater PDKs, it can be found [here](https://github.com/google/skywater-pdk).
