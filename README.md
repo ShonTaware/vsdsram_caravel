@@ -27,7 +27,7 @@
   - [Contact Information](#contact-information)
   
 # Specifications
-  The specifications of a 32Kbits (32 x 1024) SRAM generated using OpenRAM compiler and SKY130 PDKs are mentioned below:
+  The specifications of a 8Kbits (32 x 256) SRAM generated using OpenRAM compiler and SKY130 PDKs are mentioned below:
   
 ### Ports and Configuration 
 <table id= "data">
@@ -248,14 +248,11 @@ A template file named `myconfig_sky130.py` is added in the repository. The file 
   python3 $OPENRAM_HOME/openram.py myconfig_sky130.py
 ```
 
-  <img src="OpenRAM/images/sram_32_256_full_1.png">
+  <img src="OpenRAM/images/sram_1024_32_1.JPG">
 
 # OpenRAM Compiler Output Layout
-  The Layout for 2 X 16 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_2x16/sram_2_16_sky130A.html)
-  <img src="OpenRAM/images/sram_2x16.JPG">
-
-  The Layout for 32 X 1024 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_32x1024/sram_32_1024_sky130A.html)
-  <img src="OpenRAM/images/sram_32x1024.JPG">
+  The Layout for 2 X 16 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/sram_32x256/sram_32_256_sky130A.html)
+  <img src="OpenRAM/images/sram_32_256_full_1.png">
 
 # VSDSRAM Caravel Layout
 The snippet shows the SRAM integrated in the layout of the **user_project_wrapper** in caravel project.
