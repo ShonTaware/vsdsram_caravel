@@ -247,7 +247,7 @@ A template file named `myconfig_sky130.py` is added in the repository. The file 
   python3 $OPENRAM_HOME/openram.py myconfig_sky130.py
 ```
 
-  <img src="OpenRAM/images/sram_1024_32_1.JPG">
+  <img src="OpenRAM/images/sram_32_256_full_1.png">
 
 # OpenRAM Compiler Output Layout
   The Layout for 2 X 16 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_2x16/sram_2_16_sky130A.html)
