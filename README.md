@@ -14,6 +14,7 @@
     - [Sample OpenRAM Configurations](#sample-openram-configurations)
     - [Usage of OpenRAM](#usage-of-openram)
   - [OpenRAM Compiler Output Layout](#openram-compiler-output-layout)
+  - [VSDSRAM Caravel Layout](#vsdsram-caravel-layout)
   - [Custom Cells for OpenRAM](#custom-cells-for-openram)
       1. [6T SRAM Cell](#1-6t-sram-cell)
       2. [Pre-charge Circuit](#2-pre-charge-circuit)
@@ -255,6 +256,10 @@ A template file named `myconfig_sky130.py` is added in the repository. The file 
 
   The Layout for 32 X 1024 SRAM cell is show below. The detailed report can be found [here](https://htmlpreview.github.io/?https://github.com/ShonTaware/SRAM_SKY130/blob/main/OpenRAM/results/SRAM_32x1024/sram_32_1024_sky130A.html)
   <img src="OpenRAM/images/sram_32x1024.JPG">
+
+# VSDSRAM Caravel Layout
+The snippet shows the SRAM integrated in the layout of the **user_project_wrapper** in caravel project.
+  <img src="OpenRAM/images/user_project_wrapper1.png">
 
 # Custom Cells for OpenRAM
 
